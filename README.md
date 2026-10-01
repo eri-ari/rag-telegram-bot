@@ -1,6 +1,6 @@
-# Telegram RAG Bot con Gemini 1.5 Pro
+# Telegram RAG Bot con Gemini 3.5 flash
 
-Este bot de Telegram te permite subir archivos PDF (normales y escaneados), CSV y Excel (.xls, .xlsx) y realizar preguntas sobre ellos utilizando **Gemini 1.5 Pro**. El bot está instruido para responder citando textualmente el contenido de los documentos y sin alucinar respuestas.
+Este bot de Telegram te permite subir archivos PDF (normales y escaneados), CSV y Excel (.xls, .xlsx) y realizar preguntas sobre ellos utilizando **Gemini 3.5 flash**. El bot está instruido para responder citando textualmente el contenido de los documentos y sin alucinar respuestas.
 
 ## Requisitos Previos
 1. **Python 3.9+** instalado.
@@ -26,6 +26,11 @@ Si planeas subir PDFs que son imágenes escaneadas, necesitas instalar Tesseract
    ```
 
 ## Ejecución
+Alimenta el bot usando el siguiente comando:
+```bash
+python ingest.py
+```
+esto creara una carpeta data donde podras ingresar los archivos que quieres que use
 Ejecuta el bot usando el siguiente comando:
 ```bash
 python bot.py
@@ -33,7 +38,6 @@ python bot.py
 
 ## Uso en Telegram
 1. Busca tu bot en Telegram.
-2. Usa el comando `/start`.
-3. Envía un archivo (PDF, CSV o Excel). El bot te confirmará que lo ha procesado.
-4. Escribe cualquier pregunta relacionada a tu archivo. El bot te contestará basándose estrictamente en el contenido.
-5. Puedes enviar `/clear` para borrar el contexto y empezar con otros documentos.
+2. Usa el comando `/start`. 
+3. Escribe cualquier pregunta relacionada a tu archivo. El bot te contestará basándose estrictamente en el contenido.
+4. Puedes enviar `/clear` para borrar el contexto y empezar con otros documentos.
